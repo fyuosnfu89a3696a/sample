@@ -1,7 +1,15 @@
 //(1) ページ本体が読み込まれたタイミングで実行するコード
+let w_id;
 const result = document.getElementById("result");
+const stopwatch = document.getElementById("stopwatch");
+
+stopwatch.addEventListener("click",
+    (e) => {
+        navigator.geolocation.clearWatch(w_id);
+    }, false
+);
 if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
+    w_id = navigator.geolocation.watchPosition(
         (pos) => {
             msg = `緯度:${pos.coords.latitude}<br>
                 経度:${pos.coords.longitude}<br>
