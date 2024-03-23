@@ -1,4 +1,4 @@
-//(1) ページ本体が読み込まれたタイミングで実行するコード
+//(1) ページ本体が読み込まれたタイミングで実行するコード!
 let w_id;
 const result = document.getElementById("result");
 const stopwatch = document.getElementById("stopwatch");
